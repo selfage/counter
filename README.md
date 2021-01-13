@@ -6,7 +6,8 @@
 
 ## Overview
 
-A dead simple implementation of an in-memory Counter class written in TypeScript. Compiled to ES5.
+A dead simple implementation of an in-memory Counter class written in
+TypeScript. Compiled to ES5.
 
 ## Usage
 
