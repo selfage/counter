@@ -80,7 +80,7 @@ TEST_RUNNER.run({
       },
     },
     {
-      name: "Iterate",
+      name: "SizeAndIterate",
       execute: () => {
         // Prepare
         let counter = new Counter<string>();
@@ -88,6 +88,12 @@ TEST_RUNNER.run({
         counter.increment("one key");
         counter.increment("ten key", 10);
         let i = 0;
+
+        // Execute
+        let size = counter.size;
+
+        // Verify
+        assertThat(size, eq(2), "size");
 
         // Execute
         for (let [key, count] of counter) {

@@ -15,6 +15,10 @@ export class Counter<K> {
     return value;
   }
 
+  get size(): number {
+    return this.actualMap.size;
+  }
+
   public entries(): Iterator<[K, number]> {
     return this.actualMap.entries();
   }
