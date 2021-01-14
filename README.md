@@ -22,4 +22,10 @@ value = counter.increment('another key');
 // value is 1.
 value = counter.increment('another key', 11);
 // value is 12.
+for (let [key, count] of counter /* or `counter.entries()` */) {
+  console.log(`${key}: ${count}`);
+}
+// Prints:
+// new key: 0
+// another key: 12
 ```
