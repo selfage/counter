@@ -1,6 +1,6 @@
 {
   "name": "@selfage/counter",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A dead simple in-memory Counter class.",
   "repository": {
     "type": "git",
@@ -20,6 +20,5 @@
   "devDependencies": {
     "@selfage/test_base": "^1.0.6",
     "@selfage/tsconfig": "^1.0.1"
-  },
-  "dependencies": {}
+  }
 }
