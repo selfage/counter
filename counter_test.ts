@@ -79,5 +79,31 @@ TEST_RUNNER.run({
         assertThat(value22, eq(5), "key22 incremented by 5");
       },
     },
+    {
+      name: "Iterate",
+      execute: () => {
+        // Prepare
+        let counter = new Counter<string>();
+        counter.get("zero key");
+        counter.increment("one key");
+        counter.increment("ten key", 10);
+        let i = 0;
+
+        // Execute
+        for (let [key, count] of counter) {
+          // Verify
+          if (i === 0) {
+            assertThat(key, eq("one key"), "one key");
+            assertThat(count, eq(1), "one key count");
+          } else if (i === 1) {
+            assertThat(key, eq("ten key"), "ten key");
+            assertThat(count, eq(10), "ten key count");
+          } else {
+            throw new Error("No more key is expected.");
+          }
+          i++;
+        }
+      },
+    },
   ],
 });

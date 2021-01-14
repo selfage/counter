@@ -6,7 +6,6 @@ export class Counter<K> {
     if (value === undefined) {
       value = 0;
     }
-    this.actualMap.set(key, value);
     return value;
   }
 
@@ -21,6 +20,6 @@ export class Counter<K> {
   }
 
   public [Symbol.iterator](): Iterator<[K, number]> {
-    return this.actualMap[Symbol.iterator]();
+    return this.entries();
   }
 }

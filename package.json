@@ -20,5 +20,6 @@
   "devDependencies": {
     "@selfage/test_base": "^1.0.6",
     "@selfage/tsconfig": "^1.0.1"
-  }
+  },
+  "dependencies": {}
 }

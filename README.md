@@ -22,10 +22,10 @@ value = counter.increment('another key');
 // value is 1.
 value = counter.increment('another key', 11);
 // value is 12.
+// Technically, you can increment by 0 or negative values, but it's discouraged.
 for (let [key, count] of counter /* or `counter.entries()` */) {
   console.log(`${key}: ${count}`);
 }
-// Prints:
-// new key: 0
+// Because 'new key' is never incremented thus prints:
 // another key: 12
 ```
