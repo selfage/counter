@@ -15,4 +15,12 @@ export class Counter<K> {
     this.actualMap.set(key, value);
     return value;
   }
+
+  public entries(): Iterator<[K, number]> {
+    return this.actualMap.entries();
+  }
+
+  public [Symbol.iterator](): Iterator<[K, number]> {
+    return this.actualMap[Symbol.iterator]();
+  }
 }
