@@ -31,3 +31,19 @@ for (let [key, count] of counter /* or `counter.entries()` */) {
 // Prints:
 // another key: 12
 ```
+
+## Test matcher
+
+Provides an implementation of test matcher to be used with `@selfage/test_base`.
+
+```TypeScript
+import { eqCounter } from '@selfage/counter/tet_matcher';
+import { Counter } from '@selfage/counter';
+import { assertThat, eq } from '@selfage/test_base/matcher'; // Install `@selfage/test_base`.
+
+let counter = new Counter<string>();
+counter.increment('key1');
+counter.increment('key2', 10);
+// Match counter in insertion order.
+assertThat(counter, eqCounter([[eq('key1'), 1], [eq('key2', 10)]]), 'counter');
+```

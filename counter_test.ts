@@ -1,4 +1,5 @@
 import { Counter } from "./counter";
+import { eqCounter } from "./test_matcher";
 import { assertThat, eq } from "@selfage/test_base/matcher";
 import { TEST_RUNNER } from "@selfage/test_base/runner";
 
@@ -87,7 +88,6 @@ TEST_RUNNER.run({
         counter.get("zero key");
         counter.increment("one key");
         counter.increment("ten key", 10);
-        let i = 0;
 
         // Execute
         let size = counter.size;
@@ -95,20 +95,15 @@ TEST_RUNNER.run({
         // Verify
         assertThat(size, eq(2), "size");
 
-        // Execute
-        for (let [key, count] of counter) {
-          // Verify
-          if (i === 0) {
-            assertThat(key, eq("one key"), "one key");
-            assertThat(count, eq(1), "one key count");
-          } else if (i === 1) {
-            assertThat(key, eq("ten key"), "ten key");
-            assertThat(count, eq(10), "ten key count");
-          } else {
-            throw new Error("No more key is expected.");
-          }
-          i++;
-        }
+        // Execute & Verify
+        assertThat(
+          counter,
+          eqCounter([
+            [eq("one key"), 1],
+            [eq("ten key"), 10],
+          ]),
+          "counter"
+        );
       },
     },
   ],
