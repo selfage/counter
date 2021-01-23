@@ -1,5 +1,5 @@
 import { Counter } from "./counter";
-import { MatchFn, assertThat, eq } from "@selfage/test_base/matcher";
+import { MatchFn, assertThat, eq } from "@selfage/test_matcher";
 
 export function eqCounter<K>(
   expected?: Array<[MatchFn<K>, number]>

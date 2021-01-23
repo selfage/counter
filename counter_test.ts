@@ -1,7 +1,7 @@
 import { Counter } from "./counter";
 import { eqCounter } from "./test_matcher";
-import { assertThat, eq } from "@selfage/test_base/matcher";
-import { TEST_RUNNER } from "@selfage/test_base/runner";
+import { assertThat, eq } from "@selfage/test_matcher";
+import { TEST_RUNNER } from "@selfage/test_runner";
 
 TEST_RUNNER.run({
   name: "CounterTest",
