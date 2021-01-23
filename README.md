@@ -34,12 +34,12 @@ for (let [key, count] of counter /* or `counter.entries()` */) {
 
 ## Test matcher
 
-Provides an implementation of test matcher to be used with `@selfage/test_base`.
+Provides an implementation of test matcher to be used with `@selfage/test_matcher`.
 
 ```TypeScript
-import { eqCounter } from '@selfage/counter/tet_matcher';
+import { eqCounter } from '@selfage/counter/test_matcher';
 import { Counter } from '@selfage/counter';
-import { assertThat, eq } from '@selfage/test_base/matcher'; // Install `@selfage/test_base`.
+import { assertThat, eq } from '@selfage/test_matcher'; // Install `@selfage/test_matcher`.
 
 let counter = new Counter<string>();
 counter.increment('key1');

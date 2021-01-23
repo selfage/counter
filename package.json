@@ -1,6 +1,6 @@
 {
   "name": "@selfage/counter",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A dead simple in-memory Counter class.",
   "repository": {
     "type": "git",
