@@ -1,4 +1,5 @@
-node_modules/
-tsconfig.json
+*.ts
+!*.d.ts
 *_test.*
+tsconfig.json
 *.tsbuildinfo
