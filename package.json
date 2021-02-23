@@ -18,6 +18,7 @@
   "homepage": "https://github.com/selfage/counter#readme",
   "main": "./counter.js",
   "types": "./counter.d.ts",
+  "files": ["**/*.d.ts", "**/*.js", "!**/*_test.*"],
   "devDependencies": {
     "@selfage/test_runner": "^1.0.4",
     "@selfage/tsconfig": "^1.0.3",
