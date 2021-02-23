@@ -1,13 +1,14 @@
 {
   "name": "@selfage/counter",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "A dead simple in-memory Counter class.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/selfage/test_base.git"
   },
   "keywords": [
-    "Counter"
+    "Counter",
+    "TypeScript"
   ],
   "author": "Yuxuan Xie <teststaybaka@gmail.com> (http://www.yuxuanxie.com)",
   "license": "GPL-3.0-or-later",
